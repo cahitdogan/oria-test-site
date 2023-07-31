@@ -1,0 +1,202 @@
+:root{
+    --primary: #FFC700;
+    --secomdary: ;
+    --white: #fff;
+    --black: #000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: 62.5%; */
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-size: cover;
+}
+
+/* MAIN */
+main{
+    position: relative;
+}
+
+main .background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: orange; */
+}
+
+
+
+.thankyou .content{
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 4rem 3%;
+    background: url("../assets/images/thank-you-background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.thankyou img{
+    margin-bottom: 4.5rem;
+}
+
+.thankyou h1{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.thankyou p{
+    font-size: 1.3rem;
+    font-weight: 400;
+    max-width: 50rem;
+}
+
+/* THANKYOU POPUP */
+
+.thankyou-popup {
+    position: fixed;
+    padding: 3rem;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    margin-bottom: 1rem;
+    display: none;
+    width: 594px;
+    height: 457px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #fff;
+    border: 10px solid black;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+  }
+  
+  .thankyou-popup.active {
+    display: block;
+  }
+  
+  .thankyou-popup .thankyou-close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 2%;
+    bottom: 0.5%;
+  }
+  
+  .thankyou-popup .thankyou-close:hover,
+  .thankyou-popup .thankyou-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .thankyou-popup .thankyou-input {
+    margin-bottom: 1rem;
+    width: 518px;
+    height: 66px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+  }
+  
+  .thankyou-popup input::placeholder {
+    color: #000;
+    /* text-align: center; */
+    font-family: Poppins;
+    position: absolute;
+    top: 25%;
+    left: 3%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    opacity: 0.20000000298023224;
+  }
+  
+  .thankyou-checkbox {
+    display: flex;
+  }
+  
+  .thankyou-checkbox .thankyoucheckbox-input {
+    width: 30px;
+    height: 27px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #000;
+  }
+  
+  .thankyou-checkbox p {
+    margin-left: 2%;
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .thankyoupopup-text {
+    color: #0097ff;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1rem;
+  }
+  
+  .thankyou-popupBtn {
+    width: 518px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #ffc700;
+    margin-top: 26px;
+  }
+  
+  .thankyou-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+  }
+  
+  .thankyou-overlay.active {
+    display: block;
+  }
+
+
+@media screen and (max-width: 991px){
+    html{
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 520px){
+    
+    .logo{
+        width: 12rem;
+    }
+
+    .thankyou .content {
+        min-height: 70rem;
+        height: 100vh;
+        padding: 4rem 5%;
+    }
+}
+
+

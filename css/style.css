@@ -1,0 +1,601 @@
+:root{
+    --primary: #FFC700;
+    --secomdary: ;
+    --white: #fff;
+    --black: #000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-size: 62.5%; */
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: url('../assets/images/Background.svg');
+    background-size: cover;
+}
+
+
+.container{
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+button{
+    border: none;
+    outline: none;
+    color: var(--white);
+    background: var(--primary);
+    border-radius: 30px;
+    padding: .8rem 1.5rem;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.375rem;
+    cursor: pointer !important;
+}
+
+/* OVERLAY */
+.overlay{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+    display: none;
+}
+
+.overlay.active{
+    display: block;
+}
+
+
+/* POPUP */
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: var(--white);
+    box-shadow: 0 0.5rem 0.5rem rgb(109, 109, 109);
+    padding: 2rem;
+    border-radius: 2rem;
+    z-index: 2;
+    width: 50vw;
+    max-width: 550px;
+    display: none;
+}
+
+.popup.active{
+    display: block;
+}
+
+.popup button{
+    border-radius: 0.8rem !important;
+    font-size: 1.2rem;
+}
+
+
+.popup form{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.popup form > input{
+    padding: .6rem;
+    margin-bottom: .3rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--black);
+}
+
+.popup .check-container{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.popup form > p{
+    color: #0091d1;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+}
+
+.popup form > a {
+    text-align: center;
+}
+
+.popup form input[type=email]::placeholder, .popup form input[type=text]::placeholder {
+    font-size: 17px;
+    color: black;
+}
+
+.popup form input[type=email], .popup form input[type=text] {
+    height: 3rem;
+    font-size: 1.2rem;
+    border: none;
+    box-shadow: 0 1.5px 0.3rem rgb(143, 143, 143);
+    border-radius: 0.6rem;
+}
+
+/* HEADER */
+header{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+}
+
+header .background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.waitlistBtn {
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* MAIN */
+main{
+    position: relative;
+}
+
+main .background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: orange; */
+}
+
+/* BANNER */
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4.5rem;
+    padding: 6.25rem 0;
+    /* height: 80vh; */
+}
+
+.banner h1{
+    font-size: 5.625rem;
+    font-weight: 700;
+    color: var(--black);
+    text-align: center;
+}
+
+.banner .input-form{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+    position: relative;
+    /* margin: 0 auto; */
+}
+
+.banner span{
+    position: absolute;
+    left: 3rem;
+    top: -15px;
+    padding: 3px 5px;
+    color: var(--white);
+    background: var(--primary);
+    border-radius: 0.5rem;
+}
+
+.banner .input-form input{
+    border-radius: 1rem;
+    flex: 1;
+    /* font-size: 1.8rem; */
+    height: 3.5rem;
+    border: none;
+    box-shadow: 0 0.2rem 0.5rem rgb(180, 180, 180);
+}
+
+.banner .input-form input{
+    border-radius: 1rem;
+    flex: 1;
+    /* font-size: 1.8rem; */
+    height: 3.5rem;
+    border: none;
+    box-shadow: 0 0.2rem 0.5rem rgb(180, 180, 180);
+    padding-left: 1rem;
+    outline: none;
+    font-size: 1.3rem;
+    color: black;
+}
+
+.banner .input-form button{
+    border-radius: 1rem;
+    height: 3.5rem;
+    font-weight: 500;
+    font-size: 19px;
+    box-shadow: 0 0.2rem 0.5rem rgb(180, 180, 180);
+}
+
+/* ABOUT */
+.about{
+    text-align: center;
+    padding: 6.25rem 0;
+}
+
+.about h2{
+    color: #000;
+    text-align: center;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.about p{
+    color: #000;
+    text-align: center;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* FEATURES */
+
+.features{
+    text-align: center;
+    /* padding: 6.25rem 0; */
+    padding: 3rem;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.5); /* White background with opacity (0.5) */
+    margin-bottom: 3rem;
+}
+
+.features h2{
+    color: #000;
+    text-align: center;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.features-grid{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.features-grid div{
+    padding: 1rem;
+}
+
+
+.features-grid div img,.features-grid div h3{ 
+    margin-bottom: 1rem;
+}
+
+
+
+
+/* CTA */
+.cta{
+    text-align: center;
+    padding: 2rem 0;
+    padding: 3rem;
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.5); /* White background with opacity (0.5) */
+
+}
+
+.cta h2{
+    color: #000;
+    text-align: center;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.cta p{
+    color: #000;
+    text-align: center;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+/* THANKYOU */
+.thankyou{
+    
+    /* padding: 10rem; */
+    background: url('../assets/images/Background.svg');
+    background-size: cover;
+}
+
+.thankyou .content{
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 4rem 3%;
+    background: url("../assets/images/thank-you-background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.thankyou img{
+    margin-bottom: 4.5rem;
+}
+
+.thankyou h1{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.thankyou p{
+    font-size: 1.3rem;
+    font-weight: 400;
+    max-width: 50rem;
+}
+
+/* THANKYOU POPUP */
+
+.thankyou-popup {
+    position: fixed;
+    padding: 3rem;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    margin-bottom: 1rem;
+    display: none;
+    width: 594px;
+    height: 457px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #fff;
+    border: 10px solid black;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+  }
+  
+  .thankyou-popup.active {
+    display: block;
+  }
+  
+  .thankyou-popup .thankyou-close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 2%;
+    bottom: 0.5%;
+  }
+  
+  .thankyou-popup .thankyou-close:hover,
+  .thankyou-popup .thankyou-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .thankyou-popup .thankyou-input {
+    margin-bottom: 1rem;
+    width: 518px;
+    height: 66px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+  }
+  
+  .thankyou-popup input::placeholder {
+    color: #000;
+    /* text-align: center; */
+    font-family: Poppins;
+    position: absolute;
+    top: 25%;
+    left: 3%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    opacity: 0.20000000298023224;
+  }
+  
+  .thankyou-checkbox {
+    display: flex;
+  }
+  
+  .thankyou-checkbox .thankyoucheckbox-input {
+    width: 30px;
+    height: 27px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #000;
+  }
+  
+  .thankyou-checkbox p {
+    margin-left: 2%;
+    color: #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .thankyoupopup-text {
+    color: #0097ff;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1rem;
+  }
+  
+  .thankyou-popupBtn {
+    width: 518px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #ffc700;
+    margin-top: 26px;
+  }
+  
+  .thankyou-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+  }
+  
+  .thankyou-overlay.active {
+    display: block;
+  }
+  
+
+/* FOOTER */
+footer{
+    margin-top: 3rem;
+    background-image: linear-gradient(to right, rgba(255, 199, 0, 0.7), rgba(255, 0, 141, 0.7), rgba(0, 151, 255, 0.7), rgba(255, 95, 0, 0.7));
+}
+
+.footer_wrapper{
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer ul li a {
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 991px){
+    html{
+        font-size: 80%;
+    }
+
+    .banner h1{
+        font-size: 4rem;
+    }
+
+    .features-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .popup{
+        width: 60vw;
+        max-width: 650px;
+    }
+}
+
+@media screen and (width < 820px) {
+    body{
+        background: url('../assets/images/Background.svg');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 600%;
+    }
+
+    .banner .input-form {
+        display: block;
+        width: 90%;
+    }
+
+    .banner .input-form input {
+        display: block;
+        width: 100%;
+        height: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .banner .input-form button {
+        display: block;
+        margin: auto;
+    }
+
+    .popup{
+        width: 75vw;
+    }
+    
+}
+
+@media screen and (max-width: 520px){
+    header {
+        padding: 2rem 0.5rem;
+    }
+
+    .features-grid{
+       grid-template-columns: repeat(1, 1fr);
+    }
+
+    .logo{
+        width: 12rem;
+    }
+    .banner h1{
+        font-size: 3.5rem;
+    }
+
+    .banner .input-form {
+        display: block;
+        width: 95%;
+    }
+
+    .input-form{
+        flex-direction: column;
+    }
+
+    .cta h2{
+        font-size: 3rem;
+    }
+
+    .features h2{
+        font-size: 3rem;   
+    }
+
+    .about h2{
+        font-size: 3rem;
+    }
+
+    .thankyou .content {
+        min-height: 70rem;
+        height: 100vh;
+        padding: 4rem 5%;
+    }
+
+    .popup{
+        width: 90vw;
+    }
+}
+
+
