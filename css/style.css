@@ -184,7 +184,7 @@ main .background{
     /* margin: 0 auto; */
 }
 
-.banner span{
+.banner label{
     position: absolute;
     left: 3rem;
     top: -15px;

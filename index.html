@@ -46,7 +46,7 @@
                     Launch Your Start-up
                 </h1>
                 <form class="input-form" method="POST" action="https://script.google.com/macros/s/AKfycbwVdhe3y3dsza_I50gTqKz7eOTCYbeEd-DSFrOkj9Dqrd45x0SLRdoiPP8DGaSfp7uDWg/exec" id="my-form-2">
-                    <span>Email Address</span>
+                    <label for="email">Email Address</label>
                     <input name="email" type="email" required>
                     <button type="submit">GET EARLY ACCESS</button>
                 </form>
@@ -138,44 +138,5 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
-    <script>
-        
-        window.addEventListener("load", function () {
-                const form = document.getElementById('my-form');
-                form.addEventListener("submit", function (e) {
-                    e.preventDefault();
-                    const data = new FormData(form);
-                    const action = e.target.action;
-                    fetch(action, {
-                        method: 'POST',
-                        body: data,
-                    })
-                        .then(() => {
-                            redirectToPage();
-                        })
-                });
-            });
-        
-        window.addEventListener("load", function () {
-                const form = document.getElementById('my-form-2');
-                form.addEventListener("submit", function (e) {
-                    e.preventDefault();
-                    const data = new FormData(form);
-                    const action = e.target.action;
-                    fetch(action, {
-                        method: 'POST',
-                        body: data,
-                    })
-                        .then(() => {
-                            redirectToPage();
-                        })
-                });
-            });
-
-            function redirectToPage() {
-                    var url = "thankyou.html";
-                    window.location.href = url;
-                }
-      </script>
 </body>
 </html>
